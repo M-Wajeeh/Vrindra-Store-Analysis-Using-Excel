@@ -1,0 +1,58 @@
+Vrinda Store Data Analysis - Rough Documentation Notes
+
+Step 1: Data Cleaning
+- Removed null values using filters in Excel
+- Ensured data types were consistent (Date, Text, Number)
+- Verified no duplicate rows or inconsistencies
+
+Step 2: Data Processing
+- Created Age Group column:
+    =IF(Age<20,"Teenager",IF(Age<60,"Adult","Senior"))
+- Extracted Month from Date column:
+    =TEXT(Date, "mmmm")
+
+Step 3: Data Analysis
+
+1. Orders vs Sales Over Time
+- Pivot Table:
+    Rows: Month
+    Values: Sum of Amount, Count of Order ID
+- Combo Chart:
+    Sales (primary axis) and Order Count (secondary axis)
+    Formatted Amount to show in Millions (0.00,,"M")
+    Removed gridlines and field buttons, added chart title
+
+2. Gender-Based Spending
+- Pivot Table:
+    Rows: Gender
+    Values: Sum of Amount
+- Pie Chart:
+    Removed legend, added percentage data labels
+    Customized fill and outline for cleaner design
+
+3. Order Status Breakdown
+- Pivot Table:
+    Rows: Order Status
+    Values: Count of Order ID
+- Pie Chart with same formatting as gender chart
+
+4. Order Channels
+- Pivot Table:
+    Rows: Order Channel
+    Values: Count of Order ID
+- Pie Chart:
+    Clean label placement, no legend, custom formatting
+
+5. Top States by Orders
+- Pivot Table:
+    Rows: State
+    Values: Count of Order ID
+- Bar Chart:
+    Sorted largest to smallest to identify top contributors
+
+6. Age and Gender Analysis
+- Pivot Table:
+    Rows: Age Category, Gender
+    Values: Count of Order ID or Amount
+- Clustered Column Chart:
+    Compared activity by gender across age groups

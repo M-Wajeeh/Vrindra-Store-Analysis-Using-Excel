@@ -128,7 +128,7 @@ Axis → Format → Number Format → 0.00,,"M"
 
 - Rough_Documentation.txt – Rough documentation notes used during planning
 
-- Dashboard Screenshot.png – (Optional) Screenshot of the final dashboard (add manually)
+- Dashboard Screenshot.png –Screenshot of the final dashboard
 
 ## Key Learnings
 - Cleaning and categorizing data manually in Excel

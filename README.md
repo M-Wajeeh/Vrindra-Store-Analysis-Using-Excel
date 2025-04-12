@@ -1,3 +1,5 @@
+![Dashboard Preview](Dashboard_Screenshot.png)
+
 # Vrinda Store Data Analysis
 
 This project showcases a beginner-level yet professional-looking Excel Dashboard focused on retail data analytics. The objective was to clean the data, process it, and generate meaningful visual insights using Pivot Tables and Charts in Microsoft Excel.

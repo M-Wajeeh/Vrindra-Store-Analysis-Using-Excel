@@ -1,152 +1,143 @@
-# Vrindra-Store-Analysis-Using-Excel
-Vrinda Store Data Analysis
-This project showcases a beginner-level yet professional-looking dashboard made in Microsoft Excel, focusing on retail data analytics. The goal was to clean the data, process it, and generate meaningful visual insights using pivot tables and charts.
+# Vrinda Store Data Analysis
 
-Step 1: Data Cleaning
-Opened the Excel dataset and checked for null or missing values.
+This project showcases a beginner-level yet professional-looking Excel Dashboard focused on retail data analytics. The objective was to clean the data, process it, and generate meaningful visual insights using Pivot Tables and Charts in Microsoft Excel.
 
-Removed all blank rows or entries manually or via Excel filters.
+---
 
-Ensured all data types were correct:
+## Step 1: Data Cleaning
 
-Dates recognized as Date.
+- Opened the Excel dataset and checked for null/missing values
+- Removed all blank rows/entries manually or using Excel filters
+- Ensured correct data types:
+  - Date fields as Date
+  - Text fields like Gender or State as Text
+  - Numeric fields like Amount as Number
 
-Text fields like Gender or State as Text.
+---
 
-Numeric fields like Amount formatted as Number.
+## Step 2: Data Processing
 
-Step 2: Data Processing
-Age Categorization:
-Created a new column to group age values into:
+### Age Categorization
+Grouped age data into categories:
+- Teenager: 13–19
+- Adult: 20–59
+- Senior: 60+
 
-Teenagers: Ages 13–19
-
-Adults: Ages 20–59
-
-Seniors: Age 60+
-
-Used the IF formula in Excel for this:
-
-excel
-Copy
-Edit
+```
 =IF(Age<20,"Teenager",IF(Age<60,"Adult","Senior"))
-Month Extraction:
-From the Date column, extracted Month Names using:
+```
+## Step 3: Data Analysis and Dashboard Creation
+### 1. Orders vs Sales Over Time
+#### Pivot Table:
 
-excel
-Copy
-Edit
-=TEXT(Date, "mmmm")
-This new Month column helped in time-based trend analysis.
+- Month in Rows
 
-📈 Step 3: Data Analysis & Dashboard Creation
-1. 📊 Orders vs Sales Over Time
-Created a Pivot Table with:
+- Amount (Sum) and Order ID (Count) in Values
 
-Month in Rows
+#### Chart:
 
-Amount (Sum) and Order ID (Count) in Values
+- Combo Chart with:
 
-Used a Combo Chart:
+- Column Chart for Order Count
 
-Column chart for Order Count
+- Line Chart for Total Sales
 
-Line chart for Total Sales
+- Order Count placed on a secondary axis
 
-Placed Order Count on a secondary axis for balance
+#### Formatting:
 
-Chart Formatting:
+- Gridlines and field buttons disabled
 
-Disabled gridlines and field buttons
-
-Axis label formatted to Millions (M) via:
-
-mathematica
-Copy
-Edit
+- Axis labels formatted in Millions using:
+```
 Axis → Format → Number Format → 0.00,,"M"
-2. 🧑‍🤝‍🧑 Gender-Based Spending
-Created a Pivot Table:
+```
+### 2. Gender-Based Spending
+#### Pivot Table:
 
-Gender in Rows
+- Gender in Rows
 
-Amount in Values (Sum)
+- Amount in Values (Sum)
 
-Used a Pie Chart to visualize:
+#### Chart:
 
-Removed legend
+- Pie Chart with percentage labels
 
-Enabled data labels with percentages
+- Legend removed
 
-Customized label placement and removed fills/outlines for a clean look
+- Labels placed cleanly with no fill or outline
 
-3. 🛍️ Order Status Breakdown
-Similar setup to the gender pie chart:
+### 3. Order Status Breakdown
+#### Pivot Table:
 
-Order Status in Rows
+- Order Status in Rows
 
-Order ID in Values (Count)
+- Order ID in Values (Count)
 
-Built a Pie Chart showing proportion of statuses like Delivered, Pending, etc.
+#### Chart:
 
-Applied same formatting: no legend, custom label placements.
+- Pie Chart displaying proportions of statuses (e.g., Delivered, Pending)
 
-4. 🌐 Order Channels
-Built a Pivot Table:
+- Legend removed
 
-Order Channel in Rows (like Online, In-Store)
+- Custom label placements applied
 
-Order ID in Values (Count)
+### 4. Order Channels
+#### Pivot Table:
 
-Inserted a Pie Chart to visualize share of each order channel.
+- Order Channel in Rows (Online, In-Store, etc.)
 
-Removed clutter:
+- Order ID in Values (Count)
 
-Removed legends
+#### Chart:
 
-Added data labels with percentages
+- Pie Chart showing the share of each channel
 
-Dragged labels inside slices and removed fill/outline
+- Clutter-free: no legend, filled slices removed
 
-5. 🗺️ Top States by Order Count
-Pivot Table:
+- Labels placed inside slices for a clean layout
 
-State in Rows
+### 5. Top States by Order Count
+#### Pivot Table:
 
-Order ID in Values (Count)
+- State in Rows
 
-Sorted values from largest to smallest
+- Order ID in Values (Count)
 
-Inserted a Bar Chart (horizontal column chart)
+#### Chart:
 
-This chart clearly showed which states had the most orders
+- Horizontal Bar Chart
 
-6. 🧓📊 Age and Gender Analysis
-Created a combined Pivot Table:
+- Values sorted from largest to smallest
 
-Age Category and Gender in Rows
+### 6. Age and Gender Analysis
+#### Pivot Table:
 
-Order ID or Amount in Values
+- Age Category and Gender in Rows
 
-Inserted a Clustered Column Chart to compare groups
+- Order ID or Amount in Values
 
-Helped identify which gender in which age group was most active in shopping
+#### Chart:
 
-📁 Files Included
-Vrinda Store Data Analysis.xlsx: Full Excel workbook with data, pivot tables, and dashboard
+- Clustered Column Chart to compare age and gender groups
 
-Store Data analytics Project.txt: Rough documentation notes used as a draft
+- Visualized which demographics are most active
 
-(Optional) Dashboard Screenshot.png: Add this manually if you want a visual preview in your GitHub
+## Files Included
+- Vrinda Store Data Analysis.xlsx – Full Excel workbook with data, pivot tables, and dashboard
 
-🚀 Key Learnings
-How to clean and categorize Excel data manually
+- Rough_Documentation.txt – Rough documentation notes used during planning
 
-Creating useful Pivot Tables
+- Dashboard Screenshot.png – (Optional) Screenshot of the final dashboard (add manually)
 
-Building insightful and aesthetic Dashboards
+## Key Learnings
+- Cleaning and categorizing data manually in Excel
 
-Using Combo Charts, Pie Charts, and Bar Charts effectively
+- Using Pivot Tables for quick insights
 
-Turning raw data into business insights
+- Designing effective and aesthetic dashboards
+
+- Combining charts like Combo, Pie, and Bar Charts
+
+- Turning raw data into business-focused decisions
+
